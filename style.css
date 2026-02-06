@@ -190,3 +190,81 @@ h1 {
     gap: 15px;
 }
 
+p {
+    color: #94A3B8;
+    font-size: 1.2rem;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* Pricing Grid */
+.pricing-section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    background: #1E293B;
+    padding: 40px;
+    border-radius: 24px;
+    width: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.price-card.featured {
+    border: 2px solid var(--electric-blue);
+    transform: scale(1.05);
+    position: relative;
+}
+
+.popular-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--mint);
+    color: var(--bg-dark);
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #94A3B8;
+}
+
+ul {
+    text-align: left;
+    llst-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+ul li {
+    margin-bottom: 12px;
+    color: #CBD5E1;
+}
+
+ul li::before {
+    content "✓";
+    color: var(--mint);
+    margin-right: 10px;
+    font-weight: bold;
+}
