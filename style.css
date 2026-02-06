@@ -135,3 +135,58 @@ body {
     align-items: center;
     gap: 40px;
 }
+
+/* --- HERO SECTION LAYOUT --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%; /* 10% side padding keeps it centered */
+    min-height: 80vh;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1; /* Takes up half the space */
+    max-width: 600px;
+}
+
+/* The "Joined by you" Badge */
+.badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--brand-mint); /* Mint Green */
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* The Gradient Text (Startup) */
+.gradient-text {
+    background: linear-gradient(90deg, #fff, var(--brand-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+}
+
