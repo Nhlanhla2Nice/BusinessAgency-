@@ -9,10 +9,18 @@
 
 body {
   background-color: var(--bg-main);
-  color: var(--text-primary);
+  color: #F8FAFC;
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+
+  background-image: 
+    linear-gradient(rgba(11,14,20,0.8), rgba(11, 14, 20, 0.9)),
+    url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 
 }
 
@@ -20,28 +28,31 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 92%;
     max-width: 1200px;
     margin: 20px auto;
-    padding: 16px 32px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 100px;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     position: sticky;
     top: 20px;
     z-index: 1000;
+
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     font-weight: 700;
     font-size: 1.2rem;
-    color: var(--text-primary);
-    letter-spacing: 1px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .logo-icon {
@@ -58,26 +69,30 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-muted);
+    color: #FFFFFF;
     font-size: 0.95rem;
     font-weight: 500;
     transition: color 0.3s ease;
+    opacity: 0.9;
 }
 
 .nav-links a:hover {
-    color: var(--text-primary);
+    color: #FFFFFF;
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .btn-nav {
     text-decoration: none;
-    background-color: var(--brand-blue);
-    color: var(--text-primary);
+    background-color: #3B82F6;
+    color: #FFFFFF;
     padding: 10px 24px;
     border-radius: 50px;
+    text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.25);
 }
 
 .btn-nav:hover {
