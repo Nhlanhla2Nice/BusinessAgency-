@@ -165,6 +165,7 @@ body {
 .gradient-text {
     background: linear-gradient(90deg, #fff, var(--brand-blue));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
 }
@@ -260,7 +261,7 @@ ul li {
 }
 
 ul li::before {
-    content "✓";
+    content: "✓";
     color: var(--mint);
     margin-right: 10px;
     font-weight: bold;
