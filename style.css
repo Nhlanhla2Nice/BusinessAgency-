@@ -33,3 +33,65 @@ body {
     top: 20px;
     z-index: 1000;
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+}
+
+.logo-icon {
+    font-weight: 900;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    gap: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+.btn-nav {
+    text-decoration: none;
+    background-color: var(--brand-blue);
+    color: var(--text-primary);
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.btn-nav:hover {
+    background-color: #2563EB;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .navbar {
+        width: 85%;
+        padding: 12px 20px;;
+    }
+}
