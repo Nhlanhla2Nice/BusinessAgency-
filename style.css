@@ -46,13 +46,21 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-weight: 700;
+    gap: 12px;
+}
+
+.logo-image {
+    width: auto;
+    height: 32px;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+}
+
+.logo-text {
     font-size: 1.2rem;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    color: #F8FAFC;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .logo-icon {
