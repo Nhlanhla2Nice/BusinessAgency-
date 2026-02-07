@@ -1,29 +1,69 @@
+/* GLOBAL VARIABLES */
 :root {
-  --bg-main: #0B0E14;
-  --text-primary: #F8FAFC;
-  --text-muted: #94A3B8;
-  --brand-blue: #3B82F6;
-  --glass-bg: rgba(30, 41, 59, 0.6);
-  --glass-border: rgba(148,163,184, 0.1);
+    --bg-main: #0B0E14;
+    --text-primary: #F8FAFC;
+    --text-muted: #94A3B8;
+    --brand-blue: #3B82F6;
+    --brand-mint: #2DD4BF;
+    --glass-bg: rgba(30, 41, 59, 0.6);
+    --glass-border: rgba(148, 163, 184, 0.1);
 }
 
 body {
-  background-color: var(--bg-main);
-  color: #F8FAFC;
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-
-  background-image: 
-    linear-gradient(rgba(11,14,20,0.8), rgba(11, 14, 20, 0.9)),
-    url('background.jpg');
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: linear-gradient(rgba(11, 14, 20, 0.8), rgba(11, 14, 20, 0.9)), url('background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-
 }
 
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 800;
+}
+
+p {
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #fff, var(--brand-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.badge {
+    background: rgba(45, 212, 191, 0.1);
+    color: var(--brand-mint);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(45, 212, 191, 0.1);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -40,7 +80,6 @@ body {
     position: sticky;
     top: 20px;
     z-index: 1000;
-
 }
 
 .logo {
@@ -63,43 +102,30 @@ body {
     text-transform: uppercase;
 }
 
-.logo-icon {
-    font-weight: 900;
-}
-
 .nav-links {
     display: flex;
-    list-style-type: none;
     gap: 40px;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-links a {
-    text-decoration: none;
     color: #FFFFFF;
     font-size: 0.95rem;
     font-weight: 500;
-    transition: color 0.3s ease;
     opacity: 0.9;
 }
 
 .nav-links a:hover {
-    color: #FFFFFF;
     opacity: 1;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .btn-nav {
-    text-decoration: none;
-    background-color: #3B82F6;
+    background-color: var(--brand-blue);
     color: #FFFFFF;
     padding: 10px 24px;
     border-radius: 50px;
-    text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
-    transition: 0.3s ease;
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.25);
 }
 
@@ -115,197 +141,92 @@ body {
     }
     .navbar {
         width: 85%;
-        padding: 12px 20px;;
+        padding: 12px 20px;
     }
 }
 
-/* Body Base */
-body {
-    background-color: var(--bg-dark);
-    color: var(--var(--text-white));
-    margin: 0;
-    overflow-x: hidden;
-}
-
-/* Hero Styling */
-.hero {
-    padding: 180px 10% 100px;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    align-items: center;
-    gap: 40px;
-}
-
-/* --- HERO SECTION LAYOUT --- */
+/* HERO SECTION */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px 10%; /* 10% side padding keeps it centered */
+    padding: 180px 10% 100px;
     min-height: 80vh;
     gap: 50px;
 }
 
 .hero-content {
-    flex: 1; /* Takes up half the space */
+    flex: 1;
     max-width: 600px;
 }
 
-/* The "Joined by you" Badge */
-.badge {
-    background: rgba(45, 212, 191, 0.1);
-    color: var(--mint);
-    padding: 8px 16px;
-    border-radius: 100px;
-    font-size: 0.8rem;
-    border: 1px solid rgba(45, 212, 191, 0.1);
-    display: inline-block;
-}
-
-/* The Gradient Text (Startup) */
-.gradient-text {
-    background: linear-gradient(90deg, #fff, var(--brand-blue));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 800;
-}
-
-h1 {
+.hero h1 {
     font-size: 3.5rem;
     line-height: 1.1;
     margin: 0 0 20px 0;
 }
 
 .hero p {
-    color: var(--text-muted);
     font-size: 1.1rem;
-    line-height: 1.6;
     margin-bottom: 30px;
+    max-width: 500px;
 }
 
 .hero-btns {
     display: flex;
-    gap: 15px;
-}
-/* --- HERO BUTTONS CONTAINER --- */
-.hero-btns {
-    display: flex;      
-    gap: 20px;           
-    margin-top: 30px;    
+    gap: 20px;
+    margin-top: 30px;
 }
 
-/*  SHARED BUTTON STYLES */
 .hero-btns a {
-    text-decoration: none;      
-    padding: 14px 32px;         
-    border-radius: 50px;        
-    font-weight: 600;           
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
     font-size: 1rem;
-    transition: all 0.3s ease;  
 }
 
-/* --- BUTTON 1: VIEW PRICING (Solid Blue) --- */
 .hero-btns .btn-primary {
-    background-color: var(--brand-blue); 
+    background-color: var(--brand-blue);
     color: #FFFFFF;
-    border: 2px solid var(--brand-blue); 
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); 
+    border: 2px solid var(--brand-blue);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
 }
 
 .hero-btns .btn-primary:hover {
-    background-color: #2563EB;  
-    transform: translateY(-3px); 
+    background-color: #2563EB;
+    transform: translateY(-3px);
     box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
 }
 
-/*  BUTTON 2: EXPLORE DEMOS (Glass/Outline)  */
 .hero-btns .btn-secondary {
-    background-color: transparent;      
-    color: #FFFFFF;                      
+    background-color: transparent;
+    color: #FFFFFF;
     border: 2px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);          
+    backdrop-filter: blur(5px);
 }
 
 .hero-btns .btn-secondary:hover {
-    border-color: #FFFFFF;              
-    background-color: rgba(255, 255, 255, 0.1); 
+    border-color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-3px);
 }
 
-p {
-    color: #94A3B8;
-    font-size: 1.2rem;
-    max-width: 500px;
-    line-height: 1.6;
+.hero-visual {
+    display: none;
 }
 
-/* Pricing Grid */
-.pricing-section {
-    padding: 100px 10%;
-    text-align: center;
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
+    .hero-btns {
+        justify-content: center;
+    }
 }
 
-.pricing-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
-    flex-wrap: wrap;
-}
-
-.price-card {
-    background: #1E293B;
-    padding: 40px;
-    border-radius: 24px;
-    width: 350px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.price-card.featured {
-    border: 2px solid var(--electric-blue);
-    transform: scale(1.05);
-    position: relative;
-}
-
-.popular-tag {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--mint);
-    color: var(--bg-dark);
-    padding: 4px 12px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 0.7rem;
-}
-
-.price {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin: 20px 0;
-}
-
-.price span {
-    font-size: 1rem;
-    color: #94A3B8;
-}
-
-.features {
-    text-align: left;
-    list-style: none;
-    padding: 0;
-    margin: 30px 0;
-}
-
-.features li {
-    margin-bottom: 12px;
-    color: #CBD5E1;
-}
-
-/* --- SERVICES SECTION --- */
+/* SERVICES SECTION */
 .services-section {
     padding: 100px 10%;
     text-align: center;
@@ -316,38 +237,33 @@ p {
     margin: 10px 0;
 }
 
-/* The Grid Layout */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 50px;
 }
 
-/* The Card Style */
 .service-card {
-    background: rgba(30, 41, 59, 0.4); 
+    background: rgba(30, 41, 59, 0.4);
     border: 1px solid var(--glass-border);
     padding: 40px 30px;
     border-radius: 20px;
     transition: 0.3s ease;
     text-align: left;
-    position: relative;
 }
 
-/* HOVER EFFECT: The "Float" */
 .service-card:hover {
-    transform: translateY(-10px); 
-    border-color: var(--brand-blue); 
+    transform: translateY(-10px);
+    border-color: var(--brand-blue);
     background: rgba(30, 41, 59, 0.6);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* Icon Box Styling */
 .icon-box {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.05); 
+    background: rgba(255, 255, 255, 0.05);
     width: 70px;
     height: 70px;
     display: flex;
@@ -363,131 +279,89 @@ p {
     color: var(--text-primary);
 }
 
-.service-card p {
-    color: var(--text-muted);
-    line-height: 1.6;
-}
-
-
-/* --- FOOTER SECTION --- */
-.footer {
-    background-color: #0B0E14; 
-    border-top: 1px solid var(--glass-border);
-    padding: 80px 10% 20px;
-    margin-top: 100px;
-    text-align: left;
-}
-
-/* 1. The Call to Action (CTA) */
-.footer-cta {
+/* DEMOS SECTION (BLOCK GRID) */
+.demos-section {
+    padding: 100px 10%;
     text-align: center;
-    margin-bottom: 50px;
 }
 
-/* Target the button specifically inside the footer */
-.footer-cta .btn-primary {
-    display: inline-block;       
-    background-color: var(--brand-blue);
-    color: #FFFFFF;
-    text-decoration: none;       
-    padding: 16px 40px;          
-    border-radius: 50px;         
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-top: 20px;            
-    
-    /* THE GLOW EFFECT (Matches Navbar) */
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); 
-    transition: all 0.3s ease;
-}
-
-/* Hover Effect */
-.footer-cta .btn-primary:hover {
-    transform: translateY(-3px); 
-    background-color: #2563EB;
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
-}
-
-.footer-cta h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.footer-cta p {
-    color: var(--text-muted);
-    margin-bottom: 30px;
-}
-
-.footer-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
-    margin-bottom: 50px;
-}
-
-/* The Grid Layout */
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+/* THE CONTAINER */
+.demo-grid {
+    display: flex;
+    justify-content: center;
     gap: 40px;
-    margin-bottom: 60px;
+    flex-wrap: wrap;
+    margin-top: 60px;
 }
 
-/* Typography */
-.footer-col h4 {
-    color: #fff;
-    font-size: 1.1rem;
+/* THE BLOCK CARD */
+.demo-card-block {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 350px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.demo-card-block:hover {
+    transform: translateY(-10px);
+    border-color: var(--brand-blue);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* THE IMAGE AREA */
+.image-block-box {
+    width: 100%;
+    height: 250px;
+    background: #0B0E14;
+    border-bottom: 1px solid var(--glass-border);
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.block-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease;
+}
+
+.demo-card-block:hover .block-image {
+    transform: scale(1.05);
+}
+
+/* TEXT CONTENT */
+.demo-info {
+    padding: 25px;
+}
+
+.demo-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+}
+
+.demo-info p {
+    font-size: 0.9rem;
     margin-bottom: 20px;
 }
 
-.footer-desc {
-    color: var(--text-muted);
-    line-height: 1.6;
-    font-size: 0.9rem;
-    margin-top: 15px;
-}
-
-/* Links */
-.footer-links {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links li {
-    margin-bottom: 12px;
-}
-
-.footer-links a, .social-icons a {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 0.95rem;
-}
-
-/* Hover Effect: Links turn Blue */
-.footer-links a:hover, .social-icons a:hover {
+.demo-info .text-link {
     color: var(--brand-blue);
-    padding-left: 5px; /* Tiny slide effect */
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.social-icons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-/* Bottom Copyright */
-.footer-bottom {
-    text-align: center;
-    border-top: 1px solid var(--glass-border);
-    padding-top: 30px;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
-/* =========================================
-   PRICING SECTION (FIXED)
-   ========================================= */
-
+/* PRICING SECTION */
 .pricing-section {
     padding: 100px 10%;
     text-align: center;
@@ -498,7 +372,7 @@ p {
     margin-bottom: 20px;
 }
 
-/* 1. TOGGLE SWITCH (Fixed Price vs Subscription) */
+/* Toggle Switch */
 .toggle-container {
     display: flex;
     align-items: center;
@@ -516,12 +390,19 @@ p {
     height: 26px;
 }
 
-.switch input { opacity: 0; width: 0; height: 0; }
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
 
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: #334155;
     transition: .4s;
     border-radius: 34px;
@@ -530,35 +411,39 @@ p {
 .slider:before {
     position: absolute;
     content: "";
-    height: 18px; width: 18px;
-    left: 4px; bottom: 4px;
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
     background-color: white;
     transition: .4s;
     border-radius: 50%;
 }
 
-input:checked + .slider { background-color: var(--brand-mint); }
-input:checked + .slider:before { transform: translateX(24px); }
+input:checked + .slider {
+    background-color: var(--brand-mint);
+}
 
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
 
-/* 2. THE GRID LAYOUT */
+/* Pricing Grid */
 .pricing-grid {
-    display: flex;            /* Flex works better for centering 2 cards */
+    display: flex;
     justify-content: center;
-    align-items: center;      /* Vertically aligns them */
+    align-items: center;
     gap: 40px;
-    flex-wrap: wrap;          /* Stacks them on phone screens */
+    flex-wrap: wrap;
     margin-top: 30px;
 }
 
-/* 3. CARD STYLING */
-/* Applies to both '.price-grid' and '.price-card' classes */
 .price-grid, .price-card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
     padding: 40px;
-    width: 350px;             /* Fixed width for consistency */
+    width: 350px;
     text-align: left;
     transition: transform 0.3s ease;
     position: relative;
@@ -569,35 +454,24 @@ input:checked + .slider:before { transform: translateX(24px); }
     border-color: var(--brand-blue);
 }
 
-/* 4. THE FEATURED CARD (Growth Partner) */
 .featured {
-    border: 2px solid var(--brand-mint); /* Mint Green Border */
-    background: rgba(30, 41, 59, 0.6);   /* Slightly darker background */
-    box-shadow: 0 0 30px rgba(45, 212, 191, 0.15); /* Mint Glow */
-    transform: scale(1.05);              /* Makes it slightly bigger */
+    border: 2px solid var(--brand-mint);
+    background: rgba(30, 41, 59, 0.6);
+    box-shadow: 0 0 30px rgba(45, 212, 191, 0.15);
+    transform: scale(1.05);
 }
 
-/* The "Most Popular" Badge */
 .popular-tag {
     position: absolute;
     top: -14px;
-    right: 30px;              /* Moves it to the right corner */
+    right: 30px;
     background: var(--brand-mint);
-    color: #0B0E14;           /* Dark Text */
+    color: #0B0E14;
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 10px rgba(45, 212, 191, 0.4);
-}
-
-/* 5. TYPOGRAPHY & LISTS */
-.price-card h3, .price-grid h3 {
-    margin-top: 0;
-    font-size: 1.2rem;
-    color: var(--text-primary);
 }
 
 .price {
@@ -613,60 +487,121 @@ input:checked + .slider:before { transform: translateX(24px); }
     font-weight: 400;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 30px 0;
-}
-
 .features li {
     margin-bottom: 12px;
-    color: var(--text-muted);
-    font-size: 0.95rem;
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 0.95rem;
 }
 
-/* Add the Mint Checkmark */
 .features li::before {
     content: "✓";
     color: var(--brand-mint);
     font-weight: bold;
 }
 
-/* 6. BUTTONS INSIDE CARDS */
 .price-grid a, .price-card a {
-    display: block;           /* Makes button full width */
+    display: block;
     width: 100%;
     text-align: center;
     padding: 14px 0;
     border-radius: 50px;
     font-weight: 700;
-    text-decoration: none;
-    transition: 0.3s;
-    box-sizing: border-box; /* Prevents padding from breaking width */
+    box-sizing: border-box;
 }
 
-/* The Outline Button (Startup Boost) */
 .btn-outline {
     border: 2px solid var(--brand-blue);
     color: #FFFFFF !important;
     background: transparent;
 }
+
 .btn-outline:hover {
     background: var(--brand-blue);
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
 }
 
-/* The Solid Button (Growth Partner) */
 .btn-primary {
     background: var(--brand-blue);
     color: #FFFFFF !important;
     border: none;
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
 }
+
 .btn-primary:hover {
     background: #2563EB;
     box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+}
+
+/* Footer */
+.footer {
+    background-color: #0B0E14;
+    border-top: 1px solid var(--glass-border);
+    padding: 80px 10% 20px;
+    margin-top: 100px;
+    text-align: left;
+}
+
+.footer-cta {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.footer-cta .btn-primary {
+    display: inline-block;
+    padding: 16px 40px;
+    margin-top: 20px;
+}
+
+.footer-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+    margin-bottom: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a, .social-icons a {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover, .social-icons a:hover {
+    color: var(--brand-blue);
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 30px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
 }

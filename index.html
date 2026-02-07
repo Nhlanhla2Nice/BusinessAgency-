@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webify</title>
+    <title>Webify | Scale Your Business</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    
     <nav class="navbar">
         <div class="logo">
             <img src="Logo.jpg" alt="Webify Logo" class="logo-image">
@@ -20,7 +22,7 @@
             <li><a href="#faq">FAQ</a></li>
         </ul>
 
-        <a href="#start" class="btn-nav">Start Your Project</a>
+        <a href="#pricing" class="btn-nav">Start Your Project</a>
     </nav>
     
     <main>
@@ -28,13 +30,14 @@
             <div class="hero-content">
                 <span class="badge">Joined by you this month</span>
                 <h1>Webify your <span class="gradient-text">Business</span></h1>
-                <p>High-performance websites delivered at a fixed price or a seamless monthly subscription. No hidden fees, just pure digital excellece.</p>
+                <p>High-performance websites delivered at a fixed price or a seamless monthly subscription. No hidden fees, just pure digital excellence.</p>
 
                 <div class="hero-btns">
                     <a href="#pricing" class="btn-primary">View Pricing</a>
                     <a href="#demos" class="btn-secondary">Explore Demos</a>
                 </div>
             </div>
+            
             <div class="hero-visual">
                 <div class="floating-card">
                     <div class="browser-dot-row"><span></span><span></span><span></span></div>
@@ -51,30 +54,63 @@
             </div>
 
             <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box">🚀</div> 
+                    <h3>Speed & Performance</h3>
+                    <p>Lightning-fast load times that boost your Google ranking and keep visitors engaged.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">🎨</div>
+                    <h3>Premium Design</h3>
+                    <p>Custom UI/UX that reflects your brand's unique identity. No cookie-cutter templates.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">📈</div>
+                    <h3>SEO & Growth</h3>
+                    <p>Built-in SEO structure so customers can actually find you on Google.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demos" class="demos-section">
+            <div class="section-header">
+                <span class="badge">Our Lab</span>
+                <h2>Live <span class="gradient-text">Demos</span></h2>
+                <p>Explore our latest concept projects.</p>
+            </div>
         
-            <div class="service-card">
-                <div class="icon-box">🚀</div> 
-                <h3>Speed & Performance</h3>
-                <p>Lightning-fast load times that boost your Google ranking and keep visitors engaged.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon-box">🎨</div>
-                <h3>Premium Design</h3>
-                <p>Custom UI/UX that reflects your brand's unique identity. No cookie-cutter templates.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon-box">📈</div>
-                <h3>SEO & Growth</h3>
-                <p>Built-in SEO structure so customers can actually find you on Google.</p>
-            </div>
+            <div class="demo-grid">
+                
+                <div class="demo-card-block">
+                    <a href="demos/furniture/index.html" target="_blank" class="image-block-box">
+                        <img src="furniture.png" alt="Furniture Demo" class="block-image">
+                    </a>
+                    <div class="demo-info">
+                        <h3>Velvet & Oak</h3>
+                        <p>Luxury furniture store with cart logic & dark mode.</p>
+                        <a href="demos/furniture/index.html" target="_blank" class="text-link">View Live Demo</a>
+                    </div>
+                </div>
+        
+                <div class="demo-card-block">
+                    <div class="image-block-box" style="display:flex; align-items:center; justify-content:center; background:#111;">
+                        <i class="fas fa-hammer" style="font-size: 3rem; color: #333;"></i>
+                    </div>
+                    <div class="demo-info">
+                        <h3>Restaurant App</h3>
+                        <p>Online food ordering system with menu management.</p>
+                        <span style="color: gray; font-size: 0.9rem;">Coming Soon</span>
+                    </div>
+                </div>
         
             </div>
         </section>
 
         <section id="pricing" class="pricing-section">
             <h2>Simple, Transparent Pricing</h2>
+            
             <div class="toggle-container">
                 <span>Fixed Price</span>
                 <label class="switch">
@@ -85,89 +121,87 @@
             </div>
 
             <div class="pricing-grid">
+                <div class="price-grid">
+                    <h3>Startup Boost</h3>
+                    <div class="price">R2000<span>/one-time</span></div>
+                    <ul class="features">
+                        <li>Custom 5-page Design</li>
+                        <li>SEO Optimization</li>
+                        <li>Mobile Responsive</li>
+                        <li>30 Days Support</li>
+                    </ul>
+                    <a href="#" class="btn-outline">Get Started</a>
+                </div>
 
-    <div class="price-grid">
-        <h3>Startup Boost</h3>
-        <div class="price">R2000<span>/one-time</span></div>
-        <ul class="features">
-            <li>Custom 5-page Design</li>
-            <li>SEO Optimization</li>
-            <li>Mobile Responsive</li>
-            <li>30 Days Support</li>
-        </ul>
-        <a href="#" class="btn-outline">Get Started</a>
-    </div>
-
-    <div class="price-card featured">
-        <span class="popular-tag">Most Popular</span>
-        <h3>Growth Partner</h3>
-        <div class="price">R500<span>/month</span></div>
-        
-        <ul class="features">
-            <li>Unlimited Content Edits</li>
-            <li>Priority 24/7 Support</li>
-            <li>Hosting & SSL Included</li>
-            <li>Zero Maintenance Stress</li>
-        </ul>
-        <a href="#" class="btn-primary">Start Subscription</a>
-    </div> </div>
+                <div class="price-card featured">
+                    <span class="popular-tag">Most Popular</span>
+                    <h3>Growth Partner</h3>
+                    <div class="price">R500<span>/month</span></div>
+                    <ul class="features">
+                        <li>Unlimited Content Edits</li>
+                        <li>Priority 24/7 Support</li>
+                        <li>Hosting & SSL Included</li>
+                        <li>Zero Maintenance Stress</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Start Subscription</a>
+                </div> 
+            </div>
         </section>
     </main>
 
-
     <footer class="footer">
-    <div class="footer-cta">
-        <h2>Ready to webify your vision?</h2>
-        <p>Let's build something amazing together.</p>
-        <a href="#pricing" class="btn-primary">Start Your Project</a>
-    </div>
+        <div class="footer-cta">
+            <h2>Ready to webify your vision?</h2>
+            <p>Let's build something amazing together.</p>
+            <a href="#pricing" class="btn-primary">Start Your Project</a>
+        </div>
 
-    <div class="footer-divider"></div>
+        <div class="footer-divider"></div>
 
-    <div class="footer-grid">
-        <div class="footer-col">
-            <div class="logo">
-                <img src="Logo.jpg" alt="Webify" class="logo-img" style="height: 24px;"> 
-                <span class="logo-text">WEBIFY</span>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo">
+                    <img src="Logo.jpg" alt="Webify" class="logo-img" style="height: 24px;"> 
+                    <span class="logo-text">WEBIFY</span>
+                </div>
+                <p class="footer-desc">
+                    High-performance websites for startups and visionaries.
+                    Based in South Africa, serving the world. Let's build something amazing together.
+                </p>
             </div>
-            <p class="footer-desc">
-                High-performance websites for startups and visionaries.
-                Based in South Africa, serving the world. Let's build something amazing together.
-            </p>
-        </div>
 
-        <div class="footer-col">
-            <h4>Company</h4>
-            <ul class="footer-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#demos">Demos</a></li>
-            </ul>
-        </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#demos">Demos</a></li>
+                </ul>
+            </div>
 
-        <div class="footer-col">
-            <h4>Legal</h4>
-            <ul class="footer-links">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-            </ul>
-        </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
 
-        <div class="footer-col">
-            <h4>Connect</h4>
-            <div class="social-icons">
-                <a href="#">Twitter</a>
-                <a href="#">TikTok</a>
-                <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#">Twitter</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="footer-bottom">
-        <p>&copy; 2026 Webify Agency. All rights reserved.</p>
-    </div>
-</footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Webify Agency. All rights reserved.</p>
+        </div>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
