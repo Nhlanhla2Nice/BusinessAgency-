@@ -484,33 +484,189 @@ p {
     font-size: 0.85rem;
 }
 
-/*  PRICING: Centered Cards */
+/* =========================================
+   PRICING SECTION (FIXED)
+   ========================================= */
+
 .pricing-section {
-    padding: 80px 0;
+    padding: 100px 10%;
     text-align: center;
 }
 
-.pricing-grid {
-   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 30px;
-    margin-top: 50px;
+.pricing-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-.price-card {
-   background: rgba(30, 41, 59, 0.4); 
+/* 1. TOGGLE SWITCH (Fixed Price vs Subscription) */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #334155;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; width: 18px;
+    left: 4px; bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider { background-color: var(--brand-mint); }
+input:checked + .slider:before { transform: translateX(24px); }
+
+
+/* 2. THE GRID LAYOUT */
+.pricing-grid {
+    display: flex;            /* Flex works better for centering 2 cards */
+    justify-content: center;
+    align-items: center;      /* Vertically aligns them */
+    gap: 40px;
+    flex-wrap: wrap;          /* Stacks them on phone screens */
+    margin-top: 30px;
+}
+
+/* 3. CARD STYLING */
+/* Applies to both '.price-grid' and '.price-card' classes */
+.price-grid, .price-card {
+    background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    padding: 40px 30px;
-    border-radius: 20px;
-    transition: 0.3s ease;
+    border-radius: 24px;
+    padding: 40px;
+    width: 350px;             /* Fixed width for consistency */
     text-align: left;
+    transition: transform 0.3s ease;
     position: relative;
 }
 
-.price-card.featured {
-    border: 2px solid var(--blue);
-    transform: scale(1.05); 
+.price-grid:hover, .price-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--brand-blue);
 }
 
-.price { font-size: 2.5rem; font-weight: 800; margin: 15px 0; }
-.price span { font-size: 1rem; color: var(--text-dim); }
+/* 4. THE FEATURED CARD (Growth Partner) */
+.featured {
+    border: 2px solid var(--brand-mint); /* Mint Green Border */
+    background: rgba(30, 41, 59, 0.6);   /* Slightly darker background */
+    box-shadow: 0 0 30px rgba(45, 212, 191, 0.15); /* Mint Glow */
+    transform: scale(1.05);              /* Makes it slightly bigger */
+}
+
+/* The "Most Popular" Badge */
+.popular-tag {
+    position: absolute;
+    top: -14px;
+    right: 30px;              /* Moves it to the right corner */
+    background: var(--brand-mint);
+    color: #0B0E14;           /* Dark Text */
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(45, 212, 191, 0.4);
+}
+
+/* 5. TYPOGRAPHY & LISTS */
+.price-card h3, .price-grid h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 15px 0 25px;
+    color: var(--text-primary);
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.features li {
+    margin-bottom: 12px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Add the Mint Checkmark */
+.features li::before {
+    content: "✓";
+    color: var(--brand-mint);
+    font-weight: bold;
+}
+
+/* 6. BUTTONS INSIDE CARDS */
+.price-grid a, .price-card a {
+    display: block;           /* Makes button full width */
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+    box-sizing: border-box; /* Prevents padding from breaking width */
+}
+
+/* The Outline Button (Startup Boost) */
+.btn-outline {
+    border: 2px solid var(--brand-blue);
+    color: #FFFFFF !important;
+    background: transparent;
+}
+.btn-outline:hover {
+    background: var(--brand-blue);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+/* The Solid Button (Growth Partner) */
+.btn-primary {
+    background: var(--brand-blue);
+    color: #FFFFFF !important;
+    border: none;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+.btn-primary:hover {
+    background: #2563EB;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+}
