@@ -491,11 +491,10 @@ p {
 }
 
 .pricing-grid {
-    display: flex;
-    justify-content: center; 
+   display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
-    flex-wrap: wrap; 
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .price-card {
