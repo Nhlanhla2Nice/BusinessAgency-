@@ -159,6 +159,7 @@ body {
     border-radius: 100px;
     font-size: 0.8rem;
     border: 1px solid rgba(45, 212, 191, 0.1);
+    display: inline-block;
 }
 
 /* The Gradient Text (Startup) */
@@ -260,3 +261,65 @@ p {
     color: #CBD5E1;
 }
 
+/* --- SERVICES SECTION --- */
+.services-section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+/* The Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* The Card Style */
+.service-card {
+    background: rgba(30, 41, 59, 0.4); 
+    border: 1px solid var(--glass-border);
+    padding: 40px 30px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    text-align: left;
+    position: relative;
+}
+
+/* HOVER EFFECT: The "Float" */
+.service-card:hover {
+    transform: translateY(-10px); 
+    border-color: var(--brand-blue); 
+    background: rgba(30, 41, 59, 0.6);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); 
+}
+
+/* Icon Box Styling */
+.icon-box {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.05); 
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.service-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
