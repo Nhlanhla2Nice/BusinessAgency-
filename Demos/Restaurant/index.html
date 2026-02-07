@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet & Oak | Fine Dining Bistro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-theme"> <nav>
+        <div class="logo">Velvet & Oak<span>.</span></div>
+        <div class="nav-icons">
+            <button id="theme-toggle" class="icon-btn"><i class="fas fa-moon"></i></button>
+            <div class="cart-container" onclick="toggleCart()">
+                <i class="fas fa-utensils"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="subtitle">Est. 2026</span>
+            <h1>Flavors that tell<br>a story.</h1>
+            <p>Experience the art of seasonal ingredients and modern techniques.</p>
+            <a href="#catalog" class="btn-shop">Explore Menu</a>
+        </div>
+    </header>
+
+    <section id="catalog" class="catalog-section">
+        <div class="section-header">
+            <h2>Our Menu</h2>
+            <p>From our kitchen to your table.</p>
+        </div>
+        
+        <div id="product-grid" class="grid"></div>
+    </section>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button onclick="toggleCart()" class="close-cart">&times;</button>
+        </div>
+        
+        <div id="cart-items" class="cart-items">
+            <p class="empty-msg">Your plate is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Subtotal</span>
+                <span id="cart-total">R 0.00</span>
+            </div>
+            <button class="btn-checkout" onclick="openCheckoutModal()">
+                Confirm Order <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div id="overlay" class="overlay" onclick="toggleCart()"></div>
+
+    <div id="checkout-modal" class="checkout-modal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h3>Secure Checkout</h3>
+                <button onclick="closeCheckoutModal()" class="close-btn">&times;</button>
+            </div>
+
+            <div id="checkout-step-1">
+                <div class="order-summary">
+                    <p>Total to Pay:</p>
+                    <h2 id="checkout-total-display">R 0.00</h2>
+                </div>
+
+                <form id="payment-form" onsubmit="processPayment(event)">
+                    <div class="form-group">
+                        <label>Delivery or Collection Email</label>
+                        <input type="email" placeholder="chef@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Card Details (Demo)</label>
+                        <div class="card-input">
+                            <i class="fas fa-credit-card"></i>
+                            <input type="text" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group half">
+                            <input type="text" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="form-group half">
+                            <input type="text" placeholder="CVC" maxlength="3" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-pay">
+                        Pay & Order <i class="fas fa-lock"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div id="payment-loading" class="payment-status" style="display: none;">
+                <div class="spinner"></div>
+                <p>Preparing your order...</p>
+            </div>
+            
+            <div id="payment-success" class="payment-status" style="display: none;">
+                <i class="fas fa-check-circle" style="font-size: 3rem; color: #2ecc71; margin-bottom: 20px;"></i>
+                <h3>Order Placed!</h3>
+                <p>The kitchen has received your request.</p>
+                <button onclick="closeCheckoutModal()" class="btn-shop" style="margin-top: 20px;">Return to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="webify-about">
+        <div class="about-container">
+            <small>RESTAURANT DEMO</small>
+            <h2>Built by Webify</h2>
+            <p>This is a <strong>High-Performance Restaurant SPA</strong> featuring real-time ordering logic and premium UX design.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Velvet & Oak Bistro. Crafted by Webify.</p>
+    </footer>
+
+    <div id="toast" class="toast">Added to your order</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
