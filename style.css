@@ -188,7 +188,7 @@ h1 {
     display: flex;
     gap: 15px;
 }
-/*  HERO BUTTONS CONTAINER  */
+/* --- HERO BUTTONS CONTAINER --- */
 .hero-btns {
     display: flex;      
     gap: 20px;           
