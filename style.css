@@ -248,21 +248,15 @@ p {
     color: #94A3B8;
 }
 
-ul {
+.features {
     text-align: left;
     list-style: none;
     padding: 0;
     margin: 30px 0;
 }
 
-ul li {
+.features li {
     margin-bottom: 12px;
     color: #CBD5E1;
 }
 
-ul li::before {
-    content: "✓";
-    color: var(--mint);
-    margin-right: 10px;
-    font-weight: bold;
-}
