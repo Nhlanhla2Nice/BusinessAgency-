@@ -32,67 +32,79 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-    background: var(--glass);
-    backdrop-filter: blur(12px);
+    background: rgba(11, 14, 20, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(15px); /* This creates the frosted glass effect */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 1rem 0;
+    padding: 0.75rem 0;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; 
+    justify-content: space-between; /* Pushes logo to left, button to right */
+    align-items: center; /* Centers everything vertically */
     padding: 0 5%;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .logo-image {
-    height: 32px;
-    border-radius: 6px;
+    height: 35px; /* Adjust based on your actual image size */
+    width: auto;
+    display: block;
 }
 
 .logo-text {
+    color: #F8FAFC;
     font-weight: 800;
-    font-size: 1.5rem;
-    letter-spacing: -1px;
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-muted);
+    color: #94A3B8;
     font-weight: 500;
-    transition: var(--transition);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--mint);
+    color: #2DD4BF; /* Mint accent on hover */
 }
 
 .btn-nav {
-    background: var(--electric-blue);
+    background: #3B82F6;
     color: white;
-    padding: 0.6rem 1.2rem;
+    padding: 0.7rem 1.5rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
-    transition: var(--transition);
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevents button text from wrapping */
 }
+
+.btn-nav:hover {
+    background: #2563EB;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
 
 /* 4. Hero Section */
 .hero {
