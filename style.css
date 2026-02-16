@@ -605,3 +605,75 @@ input:checked + .slider:before {
     color: var(--text-muted);
     font-size: 0.85rem;
 }
+
+/* FAQ SECTION */
+.faq-section {
+    padding: 100px 10%;
+    max-width: 800px; /* Keeps it readable, not too wide */
+    margin: 0 auto;   /* Centers the whole section */
+}
+
+.faq-grid {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* THE CARD STYLE */
+.faq-item {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--brand-blue);
+    background: rgba(30, 41, 59, 0.6);
+}
+
+/* THE QUESTION (Clickable Area) */
+summary {
+    padding: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: space-between; /* Pushes arrow to the right */
+    align-items: center;
+    list-style: none; /* Removes default triangle */
+}
+
+/* Removes default triangle in some browsers */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* THE ARROW ICON */
+summary i {
+    color: var(--brand-blue);
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+details[open] summary i {
+    transform: rotate(180deg);
+}
+
+/* THE ANSWER */
+.faq-content {
+    padding: 0 25px 25px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    border-top: 1px solid transparent;
+}
+
+/* Add a subtle line when open */
+details[open] .faq-content {
+    border-top-color: var(--glass-border);
+    padding-top: 20px;
+}
